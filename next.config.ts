@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
+import {routes} from "./routes";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    /* config options here */
+    async rewrites() {
+        return routes
+    },
+    reactStrictMode: false
 };
 
 export default nextConfig;
